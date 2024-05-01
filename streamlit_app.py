@@ -7,28 +7,28 @@ import io
 import requests
 
 st.header('Book Recommender System')
-# model = pickle.load(open('artifacts/model.pkl','rb'))
-# book_names = pickle.load(open('artifacts/book_names.pkl','rb'))
-# final_rating = pickle.load(open('artifacts/final_rating.pkl','rb'))
-# book_pivot = pickle.load(open('artifacts/book_pivot.pkl','rb'))
+model = pickle.load(open('artifacts/model.pkl','rb'))
+book_names = pickle.load(open('artifacts/book_names.pkl','rb'))
+final_rating = pickle.load(open('artifacts/final_rating.pkl','rb'))
+book_pivot = pickle.load(open('artifacts/book_pivot.pkl','rb'))
 
 
 
-url = 'https://emmubucket.s3.ap-south-1.amazonaws.com/artifacts/model.pkl'
-response = requests.get(url)
-model = pickle.load(io.BytesIO(response.content))
+# url = 'https://emmubucket.s3.ap-south-1.amazonaws.com/artifacts/model.pkl'
+# response = requests.get(url)
+# model = pickle.load(io.BytesIO(response.content))
 
-url = 'https://emmubucket.s3.ap-south-1.amazonaws.com/artifacts/book_names.pkl'
-response = requests.get(url)
-book_names = pickle.load(io.BytesIO(response.content))
+# url = 'https://emmubucket.s3.ap-south-1.amazonaws.com/artifacts/book_names.pkl'
+# response = requests.get(url)
+# book_names = pickle.load(io.BytesIO(response.content))
 
-url = 'https://emmubucket.s3.ap-south-1.amazonaws.com/artifacts/final_rating.pkl'
-response = requests.get(url)
-final_rating = pickle.load(io.BytesIO(response.content))
+# url = 'https://emmubucket.s3.ap-south-1.amazonaws.com/artifacts/final_rating.pkl'
+# response = requests.get(url)
+# final_rating = pickle.load(io.BytesIO(response.content))
 
-url = 'https://emmubucket.s3.ap-south-1.amazonaws.com/artifacts/book_pivot.pkl'
-response = requests.get(url)
-book_pivot = pickle.load(io.BytesIO(response.content))
+# url = 'https://emmubucket.s3.ap-south-1.amazonaws.com/artifacts/book_pivot.pkl'
+# response = requests.get(url)
+# book_pivot = pickle.load(io.BytesIO(response.content))
 
 import requests
 
