@@ -1,7 +1,7 @@
 
 
 import pickle
-import streamlit as st
+import streamlit as st # type: ignore
 import numpy as np
 
 
@@ -16,7 +16,9 @@ import requests
 # Set page to full width
 
 # Define the API URL
-api_url = "https://by5ldea1kd.execute-api.ap-south-1.amazonaws.com/default/get_data"
+# api_url = "https://by5ldea1kd.execute-api.ap-south-1.amazonaws.com/default/get_data"
+api_url = 'https://by5ldea1kd.execute-api.ap-south-1.amazonaws.com/default/fetchBookData'
+
 
 # Fetch data from the API
 response = requests.get(api_url)
